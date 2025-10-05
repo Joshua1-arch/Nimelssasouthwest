@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
-import NewsPage from "./pages/NewsPage";
+import Newspage from "./pages/NewsPage";
 import RedeemersVisitPage from "./pages/RedeemersVisitPage";
 import UnimedVisitPage from "./pages/UnimedVisitPage";
 import LagosVisitPage from "./pages/LagosVisitPage";
@@ -18,12 +18,12 @@ import "./index.css";
 
 export default function App() {
   return (
-    <Router>
+    <Router> 
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/executives" element={<ExecutivesPage />} />
-        <Route path="/news" element={<NewsPage />} />
+        <Route path="/news" element={<Newspage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/news/patron" element={<PatronPage />} />
         <Route path="/news/redeemers-visit" element={<RedeemersVisitPage />} />

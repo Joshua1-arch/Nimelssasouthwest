@@ -113,34 +113,7 @@ export default function UnimedVisitPage() {
       </section>
 
       {/* === Footer === */}
-      <footer
-        style={{
-          backgroundColor: "rgba(34,81,45,255)",
-          color: "white",
-          textAlign: "center",
-          padding: "15px",
-          marginTop: "60px",
-        }}
-      >
-        <p>&copy; 2025 NIMELSSA Southwest Region | The Southwest Sentinel</p>
-        <div className="d-flex justify-content-center gap-3">
-          <a
-            href="https://web.facebook.com/profile.php?id=61561918256194"
-            className="text-white"
-          >
-            <i className="bi bi-facebook"></i>
-          </a>
-          <a href="https://x.com/NimelssaR17193" className="text-white">
-            <i className="bi bi-twitter"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/nimelssa.southwest?igsh=bmtydGVjeXIxbTZi"
-            className="text-white"
-          >
-            <i className="bi bi-instagram"></i>
-          </a>
-        </div>
-      </footer>
+
     </>
   );
 }

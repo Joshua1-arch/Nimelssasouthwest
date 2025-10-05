@@ -172,35 +172,7 @@ export default function ContactPage() {
       </section>
 
       {/* === Footer === */}
-      <footer
-        className="text-center py-3 text-white"
-        style={{ backgroundColor: "rgba(34,81,45,255)" }}
-      >
-        <p>&copy; 2025 Student Association. All rights reserved.</p>
-        <div className="d-flex justify-content-center gap-3">
-          <a
-            href="https://web.facebook.com/profile.php?id=61561918256194"
-            className="text-white"
-          >
-            <i className="bi bi-facebook"></i>
-          </a>
-          <a href="https://x.com/NimelssaR17193" className="text-white">
-            <i className="bi bi-twitter"></i>
-          </a>
-          <a
-            href="https://www.tiktok.com/@nimelssasouthwest"
-            className="text-white"
-          >
-            <i className="bi bi-tiktok"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/nimelssa.southwest?igsh=bmtydGVjeXIxbTZi"
-            className="text-white"
-          >
-            <i className="bi bi-instagram"></i>
-          </a>
-        </div>
-      </footer>
+
     </>
   );
 }
