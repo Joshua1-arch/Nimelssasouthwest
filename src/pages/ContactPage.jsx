@@ -117,18 +117,18 @@ export default function ContactPage() {
                 <h5>
                   <i className="bi bi-envelope-fill text-success"></i> Email
                 </h5>
-                <p>info@association.org</p>
+                <p>Nimelssa.southwestregion@gmail.com</p>
 
                 <h5>
                   <i className="bi bi-telephone-fill text-success"></i> Phone
                 </h5>
-                <p>+234 800 000 0000</p>
+                <p>+234 806 390 3225</p>
 
                 <h5>
                   <i className="bi bi-geo-alt-fill text-success"></i> Office
                   Location
                 </h5>
-                <p>Student Secretariat, University Campus, Lagos, Nigeria</p>
+                <p>Ladoke Akintola University Of Technology, Ogbomo, Nigeria</p>
 
                 <h5>
                   <i className="bi bi-globe2 text-success"></i> Connect with Us

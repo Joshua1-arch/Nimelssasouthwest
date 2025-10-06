@@ -52,7 +52,7 @@ const Navbar = () => {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item"><NavLink className="nav-link" to="/">Home</NavLink></li>
             <li className="nav-item"><NavLink className="nav-link" to="/executives">Executives</NavLink></li>
-            <li className="nav-item"><NavLink className="nav-link" to="/#events">Events</NavLink></li>
+            <li className="nav-item"><NavLink className="nav-link" to="/events">Events</NavLink></li>
             <li className="nav-item"><NavLink className="nav-link" to="/news">News</NavLink></li>
             <li className="nav-item"><NavLink className="nav-link" to="/contact">Contact</NavLink></li>
           </ul>

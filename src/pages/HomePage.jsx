@@ -1,6 +1,8 @@
 // src/pages/HomePage.jsx
 import { useEffect } from "react";
 import imagesData from "../images.json";
+import { NavLink } from "react-router-dom";
+import "../HomePage.css";
 
 export default function HomePage() {
   useEffect(() => {
@@ -51,7 +53,7 @@ export default function HomePage() {
                   <p>Date: Sept 25, 2025</p>
                   <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLScLCJdC8a-HjvtPdqZIPT_-MYqmRfsb5wiS9mNxQjXDqdpaxw/viewform?usp=send_form"
-                    className="btn btn-primary"
+                    className="btn btn-primary"style={{ backgroundColor: "rgba(34,81,45,1)", borderColor: "rgba(34,81,45,1)" }}
                   >
                     Register
                   </a>
@@ -72,7 +74,7 @@ export default function HomePage() {
                   <p>Date: Oct 10, 2025</p>
                   <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLScLCJdC8a-HjvtPdqZIPT_-MYqmRfsb5wiS9mNxQjXDqdpaxw/viewform?usp=send_form"
-                    className="btn btn-primary"
+                    className="btn btn-primary"style={{ backgroundColor: "rgba(34,81,45,1)", borderColor: "rgba(34,81,45,1)" }}
                   >
                     Register
                   </a>
@@ -110,9 +112,9 @@ export default function HomePage() {
                     NIMELSSA SW leaders pay courtesy visit to Redeemer's
                     University...
                   </p>
-                  <a href="news-details.html" className="btn btn-success">
-                    Read More
-                  </a>
+                  <NavLink to="/news/redeemers-visit" className="btn btn-readmore">
+                                    Read More
+                                    </NavLink>
                 </div>
               </div>
             </div>
@@ -131,11 +133,11 @@ export default function HomePage() {
                     <small>Published: July 8, 2025</small>
                   </p>
                   <p className="card-text">
-                    HOD MLS Bowen commends NIMELSSA Southwest initiatives...
+                    NIMELSSA SW leaders pay courtesy visit to Lagos State University...
                   </p>
-                  <a href="news-details.html" className="btn btn-success">
-                    Read More
-                  </a>
+                  <NavLink to="/news/lagos-visit" className="btn btn-readmore">
+                  Read More
+                </NavLink>
                 </div>
               </div>
             </div>
@@ -387,93 +389,104 @@ export default function HomePage() {
     </div>
   </div>
 </section>
-{/* sponsor section */}
-<section id="partners" className="py-5 bg-light">
-  <div className="container">
-    <h2
-      className="text-center mb-5 fw-bold"
-      style={{ color: "rgba(34,81,45,255)" }}
-    >
+{/* sponsor section */}{/* Partners / Sponsors Section */}{/* Partners / Sponsors Section */}
+<section id="partners" className="py-5" style={{ backgroundColor: "#f8f9f5" }}>
+  <div className="container text-center">
+    <h2 className="fw-bold mb-4" style={{ color: "rgba(34,81,45,255)" }}>
       Our Partners & Sponsors
     </h2>
-          <p className="text-center mt-4 text-muted">
-      We deeply appreciate the support and collaboration of our valued partners and sponsors
-      who share our vision in promoting medical laboratory science excellence in Nigeria.
+    <p className="text-muted mb-5">
+      We proudly collaborate with outstanding institutions and brands supporting our vision.
     </p>
+
     {/* Bootstrap Carousel */}
     <div
-      id="partnersCarousel"
+      id="sponsorCarousel"
       className="carousel slide"
       data-bs-ride="carousel"
       data-bs-interval="2500"
     >
-      <div className="carousel-inner text-center align-items-center">
-        {/* First Slide */}
+      <div className="carousel-inner">
+
+        {/* Slide 1 */}
         <div className="carousel-item active">
-          <div className="row justify-content-center align-items-center g-4">
-            <div className="col-6 col-md-3">
-              <img
-                src="Life Anchor Advert.png"
-                alt="Partner 1"
-                className="img-fluid grayscale-hover"
-                style={{ maxHeight: "120px", objectFit: "contain" }}
-              />
-            </div>
-            <div className="col-6 col-md-3">
-              <img
-                src="Genomac.png"
-                alt="Partner 2"
-                className="img-fluid grayscale-hover"
-                style={{ maxHeight: "120px", objectFit: "contain" }}
-              />
-            </div>
-            <div className="col-6 col-md-3">
-              <img
-                src="Life Anchor Advert.png"
-                alt="Life Anchor Advert"
-                className="img-fluid grayscale-hover"
-                style={{ maxHeight: "120px", objectFit: "contain" }}
-              />
-            </div>
+          <div className="d-flex justify-content-center align-items-center gap-5 flex-wrap">
+            <img
+              src="Life Anchor Advert.png"
+              alt="Sponsor 1"
+              className="img-fluid"
+              style={{ maxHeight: "80px", objectFit: "contain" }}
+            />
+            <img
+              src="total.png"
+              alt="Sponsor 2"
+              className="img-fluid"
+              style={{ maxHeight: "80px", objectFit: "contain" }}
+            />
+            <img
+              src="Genomac.png"
+              alt="Sponsor 3"
+              className="img-fluid"
+              style={{ maxHeight: "80px", objectFit: "contain" }}
+            />
+            <img
+              src="sqi.png"
+              alt="Sponsor 4"
+              className="img-fluid"
+              style={{ maxHeight: "80px", objectFit: "contain" }}
+            />
+            <img
+              src="genesis.png"
+              alt="Sponsor 5"
+              className="img-fluid"
+              style={{ maxHeight: "80px", objectFit: "contain" }}
+            />
           </div>
         </div>
 
-        {/* Second Slide */}
+        {/* Slide 2 */}
         <div className="carousel-item">
-          <div className="row justify-content-center align-items-center g-4">
-            <div className="col-6 col-md-3">
-              <img
-                src="Genomac.png"
-                alt="Genomac"
-                className="img-fluid grayscale-hover"
-                style={{ maxHeight: "120px", objectFit: "contain" }}
-              />
-            </div>
-            <div className="col-6 col-md-3">
-              <img
-                src="Life Anchor Advert.png"
-                alt="Partner 4"
-                className="img-fluid grayscale-hover"
-                style={{ maxHeight: "120px", objectFit: "contain" }}
-              />
-            </div>
-            <div className="col-6 col-md-3">
-              <img
-                src="Genomac.png"
-                alt="Partner 5"
-                className="img-fluid grayscale-hover"
-                style={{ maxHeight: "120px", objectFit: "contain" }}
-              />
-            </div>
+          <div className="d-flex justify-content-center align-items-center gap-5 flex-wrap">
+            <img
+              src="Genomac.png"
+              alt="Sponsor 5"
+              className="img-fluid"
+              style={{ maxHeight: "80px", objectFit: "contain" }}
+            />
+            <img
+              src="genesis.png"
+              alt="Sponsor 5"
+              className="img-fluid"
+              style={{ maxHeight: "80px", objectFit: "contain" }}
+            />
+            <img
+              src="sqi.png"
+              alt="Sponsor 6"
+              className="img-fluid"
+              style={{ maxHeight: "80px", objectFit: "contain" }}
+            />
+            <img
+              src="total.png"
+              alt="Sponsor 7"
+              className="img-fluid"
+              style={{ maxHeight: "80px", objectFit: "contain" }}
+            />
+            <img
+              src="Life Anchor Advert.png"
+              alt="Sponsor 8"
+              className="img-fluid"
+              style={{ maxHeight: "80px", objectFit: "contain" }}
+            />
           </div>
         </div>
+
       </div>
 
       {/* Carousel Controls */}
       <button
         className="carousel-control-prev"
         type="button"
-        data-bs-target="#partnersCarousel"
+        data-bs-target="#sponsorCarousel"
         data-bs-slide="prev"
       >
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -482,40 +495,133 @@ export default function HomePage() {
       <button
         className="carousel-control-next"
         type="button"
-        data-bs-target="#partnersCarousel"
+        data-bs-target="#sponsorCarousel"
         data-bs-slide="next"
       >
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Next</span>
       </button>
     </div>
-
-    
   </div>
 </section>
 
-<section id="library" className="py-5 bg-white text-center">
+
+{/* E-Library / Resources Section */}
+<section id="resources" className="py-5 bg-light text-center">
   <div className="container">
-    <h2
-      className="fw-bold mb-4"
-      style={{ color: "rgba(34,81,45,255)" }}
-    >
-      Access E-Library
-    </h2>
-    <p className="lead mb-4 text-muted">
-      Explore academic journals, research papers, and medical laboratory science resources
-      from our E-Library portal.
-    </p>
-    <a
-      href="https://nimelssae-library.example.com" // 🔁 replace with your actual e-library link
-      target="_blank"
-      rel="noreferrer"
-      className="btn btn-success btn-lg px-4"
-    >
-      Visit E-Library
-    </a>
+    <div className="d-flex flex-wrap justify-content-center gap-3 mb-4">
+      {/* Modal Trigger Button */}
+      <button
+        type="button"
+        className="btn btn-success btn-lg px-5 py-3"
+        data-bs-toggle="modal"
+        data-bs-target="#elibraryModal"
+      >
+        📚 Access E-Library
+      </button>
+
+      {/* Other Resource Buttons */}
+      <a
+        href="NIMELSSA_SOUTHWEST_CONSTITUTION[1].docx"
+        target="_blank"
+        rel="noreferrer"
+        className="btn btn-success btn-lg px-4 py-3"
+      >
+        📜 Download the Constitution
+      </a>
+      <a
+        href="https://example-elibrary-link.com"
+        target="_blank"
+        rel="noreferrer"
+        className="btn btn-success btn-lg px-4 py-3"
+      >
+        🎶 Download the NIMELSSA Anthem
+      </a>
+    </div>
   </div>
 </section>
+
+{/* E-Library Modal */}
+<div
+  className="modal fade"
+  id="elibraryModal"
+  tabIndex="-1"
+  aria-labelledby="elibraryTitle"
+  aria-hidden="true"
+>
+  <div className="modal-dialog modal-dialog-centered modal-lg">
+    <div className="modal-content">
+      <div className="modal-header bg-success text-white">
+        <h5 className="modal-title fw-bold" id="elibraryTitle">
+          📚 NIMELSSA E-LIBRARY
+        </h5>
+        <button
+          type="button"
+          className="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div className="modal-body text-start">
+        <p>
+          <strong>The NIMELSSA National Directorate of Academics</strong> is proud to announce
+          the <strong>launch of the NIMELSSA E-Library</strong> — a platform offering access to
+          top Medical Laboratory Science textbooks, scholarship past questions, and professional
+          exam past questions.
+        </p>
+
+        <h6 className="fw-bold mt-3 text-success">
+          📘 General Medical Laboratory Science Textbooks
+        </h6>
+        <p>
+          <a
+            href="https://drive.google.com/drive/folders/1HlKZHWpxOtY1BbxjewJs1jRmre8aFTRc"
+            target="_blank"
+            rel="noreferrer"
+            className="link-success text-decoration-none"
+          >
+            Access Textbooks
+          </a>
+        </p>
+
+        <h6 className="fw-bold mt-3 text-success">
+          🎓 Scholarship Past Questions, CV Samples, and Statements of Purpose
+        </h6>
+        <p>
+          <a
+            href="https://drive.google.com/drive/folders/1GghrKVRaIJ3QtyGoMyB5PP7ntoFjqp61"
+            target="_blank"
+            rel="noreferrer"
+            className="link-success text-decoration-none"
+          >
+            Access Scholarship Resources
+          </a>
+        </p>
+
+        <h6 className="fw-bold mt-3 text-success">🧪 Professional Examination Past Questions</h6>
+        <p>
+          <a
+            href="https://drive.google.com/drive/folders/1LOkGjXmYFgkzy8HAh899I4Ho5CNUmu1n"
+            target="_blank"
+            rel="noreferrer"
+            className="link-success text-decoration-none"
+          >
+            Access Professional Exams
+          </a>
+        </p>
+      </div>
+      <div className="modal-footer">
+        <button
+          type="button"
+          className="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
           
 

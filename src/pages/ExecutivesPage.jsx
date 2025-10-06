@@ -14,6 +14,7 @@ return (
 <div className="container">
 <div className="row text-center">
 {[
+{ name: "Mls Jimoh Hammed Babatunde", role: "2nd Nimelssa Southwest Regional President", img: "Jimoh.JPG" },
 { name: "Rt. Hon. Olorunniyi Pelumi Olaoluwa", role: "President", img: "presido.jpg" },
 { name: "Hon. Folorunso Habeeb", role: "Vice President 1", img: "vicepre.jpg" },
 { name: "Hon. Ayesa Grace Ayomide", role: "Vice President 2", img: "VP21.jpg" },

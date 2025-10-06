@@ -6,11 +6,11 @@ import UnimedVisitPage from "./pages/UnimedVisitPage";
 import LagosVisitPage from "./pages/LagosVisitPage";
 import Footer from "./Footer";
 import HomePage from "./pages/HomePage";
+import EventsPage from "./pages/EventsPage";
 import ExecutivesPage from "./pages/ExecutivesPage";
 import PatronPage from "./pages/PatronPage";
 import ContactPage from "./pages/ContactPage";
 
-// import Gallery from "./Gallery";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -18,11 +18,12 @@ import "./index.css";
 
 export default function App() {
   return (
-    <Router> 
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/executives" element={<ExecutivesPage />} />
+        <Route path="/events" element={<EventsPage />} /> 
         <Route path="/news" element={<Newspage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/news/patron" element={<PatronPage />} />
