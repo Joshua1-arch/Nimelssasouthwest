@@ -81,7 +81,7 @@ export default function HomePage() {
                   <h5 className="card-title">Orientation Program</h5>
                   <p className="text-muted"><i className="bi bi-calendar-event me-2"></i>Oct 10, 2025</p>
                   <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLScLCJdC8a-HjvtPdqZIPT_-MYqmRfsb5wiS9mNxQjXDqdpaxw/viewform?usp=send_form"
+                    href=""
                     className="btn btn-success w-100"
                   >
                     Register Now
