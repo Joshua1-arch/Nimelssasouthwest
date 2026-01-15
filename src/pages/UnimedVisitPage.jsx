@@ -6,114 +6,56 @@ import "../index.css";
 export default function UnimedVisitPage() {
   return (
     <>
-      {/* === Header Section === */}
-      <header
-        className="text-center text-white"
-        style={{
-          background:
-            "linear-gradient(rgba(34,81,45,0.85), rgba(34,81,45,0.85)), url('Pictures/1 (15).jpg') center/cover no-repeat",
-          padding: "120px 20px",
-        }}
-      >
-        <h1>The Southwest Sentinel</h1>
-        <p className="lead">Connecting You to the News that Matters</p>
-      </header>
-
-      {/* === Blog Content === */}
-      <section className="container content-section mt-5 mb-5">
-        <h4
-          className="headline text-uppercase text-center"
-          style={{ color: "rgba(34,81,45,255)" }}
-        >
-          COURTESY VISIT TO THE ACTING VICE CHANCELLOR, UNIMED ONDO
-        </h4>
-        <p className="press-meta text-center">
-          Press Release | Issued: June 7, 2025
-        </p>
-
-        <p>
-          As part of the ongoing{" "}
-          <strong>NIMELSSA Southwest Regional Congress and Leadership Summit</strong>,
-          key delegates and executives of the{" "}
-          <strong>
-            Nigerian Medical Laboratory Science Students’ Association (NIMELSSA)
-            Southwest Region
-          </strong>{" "}
-          paid a courtesy visit to the Acting Vice Chancellor of the{" "}
-          <strong>University of Medical Sciences, Ondo</strong>, Professor Adolphus
-          Loto.
-        </p>
-
-        <p>
-          The visit, which took place on the{" "}
-          <strong>23rd of May, 2025</strong> at the University’s Administrative
-          Building, was a significant highlight of the summit, which brought
-          together student leaders and delegates from across the Southwest
-          geopolitical zone.
-        </p>
-
-        <p>
-          In his remarks, <strong>Professor Loto</strong> warmly welcomed the
-          NIMELSSA delegation and expressed his deep appreciation for the
-          association’s contribution to healthcare and academic leadership. He
-          emphasized the critical role of Medical Laboratory Scientists in the
-          healthcare delivery system, noting the intricacies and intellectual
-          excitement involved in working at the microscopic level.
-        </p>
-
-        <blockquote className="blockquote border-start border-success ps-3">
-          <p className="mb-0 fst-italic">
-            “Medical Laboratory Scientists are the unseen backbone of clinical
-            diagnostics,” Prof. Loto stated. “Without your input, the process of
-            providing effective healthcare cannot be complete. You must never
-            underrate yourselves or the impact you have on patient care.”
-          </p>
-        </blockquote>
-
-        <p className="mt-3">
-          Professor Loto further commended the regional executives for their
-          commitment and vision, as well as the efforts of the host chapter at
-          UNIMED for successfully organizing the Congress and Leadership Summit.
-        </p>
-
-        <p>
-          Also in attendance was <strong>Professor Aderemi Abubakar</strong>, who
-          reinforced the Acting Vice Chancellor’s sentiments. He encouraged the
-          students to remain steadfast in their pursuit of excellence and
-          innovation, and to continue holding themselves in high esteem as
-          integral members of the healthcare profession.
-        </p>
-
-        <p>
-          The meeting was attended by several NIMELSSA Southwest regional
-          executives and chapter delegates who appreciated the warm reception and
-          inspiring words from the university leadership.
-        </p>
-
-        <p>
-          The <strong>2025 NIMELSSA Southwest Congress and Leadership Summit</strong>{" "}
-          continues to serve as a platform for leadership development,
-          collaboration, and advocacy among Medical Laboratory Science students
-          across the region.
-        </p>
-
-        <div className="text-center mt-4">
-          <img
-            src="Pictures/unimed-visit.jpg"
-            alt="NIMELSSA Southwest Executives Visit UNIMED Ondo"
-            className="img-fluid rounded"
-          />
-          <p className="text-muted mt-2">
-            <small>
-              NIMELSSA Southwest delegation with the Acting Vice Chancellor,
-              UNIMED Ondo
-            </small>
+      <header className="hero">
+        <div className="container text-center">
+          <h1 className="animate__animated animate__fadeInUp">The Southwest Sentinel</h1>
+          <p className="lead text-white opacity-90 animate__animated animate__fadeInUp animate__delay-1s">
+            Connecting You to the News that Matters
           </p>
         </div>
+      </header>
+
+      <section className="container py-5 mt-5">
+        <div className="row justify-content-center">
+          <div className="col-lg-10">
+            <div className="badge bg-success-subtle text-success border border-success-subtle mb-3 p-2 px-3">Press Release</div>
+            <h2 className="fw-bold text-dark mb-2">Courtesy Visit to the Acting Vice Chancellor, UNIMED Ondo</h2>
+            <p className="text-muted small mb-5">
+              <i className="bi bi-calendar3 me-2"></i>Issued: June 7, 2025
+            </p>
+
+            <div className="blog-body fs-5 text-muted" style={{ lineHeight: "1.8" }}>
+              <p className="mb-4">
+                As part of the ongoing <strong>NIMELSSA Southwest Regional Congress and Leadership Summit</strong>,
+                key delegates and executives paid a courtesy visit to the Acting Vice Chancellor of the 
+                <strong>University of Medical Sciences, Ondo</strong>, Professor Adolphus Loto.
+              </p>
+
+              <blockquote className="blockquote border-start border-4 border-success ps-4 py-3 bg-light rounded-4 mb-5">
+                <p className="mb-0 italic text-dark fs-4">
+                  “Medical Laboratory Scientists are the unseen backbone of clinical diagnostics. Without your input, the process of providing effective healthcare cannot be complete.”
+                </p>
+                <footer className="blockquote-footer mt-2">Prof. Adolphus Loto</footer>
+              </blockquote>
+
+              <p className="mb-4">
+                Professor Loto further commended the regional executives for their commitment and vision, highlighting the essential role of scholars in advancing the Medical Laboratory Science profession.
+              </p>
+
+              <div className="text-center my-5">
+                <img
+                  src="Pictures/unimed-visit.jpg"
+                  alt="NIMELSSA Southwest Executives Visit UNIMED Ondo"
+                  className="img-fluid rounded-4 shadow-sm mb-3"
+                />
+                <p className="small text-muted">
+                  NIMELSSA Southwest delegation with the Acting Vice Chancellor, UNIMED Ondo
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-
-      {/* === Footer === */}
-
     </>
   );
 }

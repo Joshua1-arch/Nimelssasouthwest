@@ -24,37 +24,75 @@ const Navbar = () => {
   return (
     <nav
       className={`navbar navbar-expand-lg navbar-dark fixed-top ${
-        scrolled ? "scrolled" : ""
+        scrolled ? "scrolled shadow-sm" : ""
       }`}
       style={{
         backgroundColor:
           location.pathname === "/contact"
-            ? "rgba(34,81,45,1)"
-            : scrolled
-            ? "rgba(34,81,45,0.95)"
+            ? "var(--primary-color)"
             : "transparent",
-        transition: "background 0.3s ease",
       }}
     >
       <div className="container">
         <NavLink className="navbar-brand" to="/">
           <img src="/logo1.png" alt="Logo" height="40" />
         </NavLink>
+        
+        {/* Mobile Toggle Button */}
         <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item"><NavLink className="nav-link" to="/">Home</NavLink></li>
-            <li className="nav-item"><NavLink className="nav-link" to="/executives">Executives</NavLink></li>
-            <li className="nav-item"><NavLink className="nav-link" to="/events">Events</NavLink></li>
-            <li className="nav-item"><NavLink className="nav-link" to="/news">News</NavLink></li>
-            <li className="nav-item"><NavLink className="nav-link" to="/contact">Contact</NavLink></li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/">Home</NavLink>
+            </li>
+
+            {/* --- EXECUTIVES DROPDOWN START --- */}
+            <li className="nav-item dropdown">
+              <a 
+                className="nav-link dropdown-toggle" 
+                href="#" 
+                role="button" 
+                data-bs-toggle="dropdown" 
+                aria-expanded="false"
+              >
+                Executives
+              </a>
+              <ul className="dropdown-menu">
+                <li>
+                  <NavLink className="dropdown-item" to="/executives">
+                    Current Executives
+                  </NavLink>
+                </li>
+                <li>
+                  {/* Pointing to a specific page or section for Past Execs */}
+                  <NavLink className="dropdown-item" to="/past-executives">
+                    Past Executives
+                  </NavLink>
+                </li>
+              </ul>
+            </li>
+            {/* --- EXECUTIVES DROPDOWN END --- */}
+
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/events">Events</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/news">News</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/contact">Contact</NavLink>
+            </li>
           </ul>
         </div>
       </div>

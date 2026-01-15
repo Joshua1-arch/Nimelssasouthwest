@@ -8,98 +8,67 @@ export default function NewsPage() {
   return (
     <>
       {/* Hero Header */}
-      <section id="home" className="hero position-relative text-center text-white">
-        <div className="container position-relative">
-          <h1 style={{ color: "#f8f9f5" }}>News & Updates</h1>
-          <p className="lead">
+      <section id="home" className="hero">
+        <div className="container text-center">
+          <h1 className="animate__animated animate__fadeInUp">News & Updates</h1>
+          <p className="lead text-white opacity-90 animate__animated animate__fadeInUp animate__delay-1s">
             Stay informed with the latest happenings in the NIMELSSA Southwest Region
           </p>
         </div>
       </section>
 
       {/* News Section */}
-      <main className="container mt-5 mb-5">
-        <div className="row justify-content-center">
-          {/* === NEWS 1 === */}
-          <div className="col-md-6">
-            <div className="news-card">
-              <img src="Pictures/1 (8).jpg" alt="Mr A.A. Odekanmi - Patron" />
-              <div className="news-body">
-                <h5 className="headline">Introducing Our Esteemed Patron</h5>
-                <p className="meta">Published: July 2025 | Author: NIMELSSA Southwest</p>
-                <p>
-                  Meet <strong>Mr. Akeem Adesina Odekanmi</strong>, a seasoned Medical Laboratory Scientist, 
-                  Fellow of the Medical Laboratory Science Council of Nigeria, and Acting Director/Head of 
-                  Medical Laboratory Science at UCH Ibadan...
-                </p>
-                <NavLink to="/news/patron" className="btn btn-readmore">
-                   Read More
+      <main className="container py-5">
+        <div className="row g-4">
+          {[
+            {
+              title: "Introducing Our Esteemed Patron",
+              date: "July 2025",
+              img: "Pictures/1 (8).jpg",
+              link: "/news/patron",
+              text: "Meet Mr. Akeem Adesina Odekanmi, a seasoned Medical Laboratory Scientist and Acting Director/Head of Medical Laboratory Science at UCH Ibadan..."
+            },
+            {
+              title: "NIMELSSA SW Leaders Visit Redeemer’s University",
+              date: "August 6, 2025",
+              img: "Pictures/1 (15).jpg",
+              link: "/news/redeemers-visit",
+              text: "The Southwest leadership of NIMELSSA paid a strategic courtesy visit to Redeemer’s University, strengthening collaboration..."
+            },
+            {
+              title: "Courtesy Visit to the Acting Vice Chancellor, UNIMED Ondo",
+              date: "June 7, 2025",
+              img: "Pictures/1 (15).jpg",
+              link: "/news/unimed-visit",
+              text: "As part of the ongoing NIMELSSA Southwest Regional Congress, regional executives paid a courtesy visit to the Acting Vice Chancellor..."
+            },
+            {
+              title: "NIMELSSA Southwest Pays Courtesy Visit to LASU",
+              date: "July 8, 2025",
+              img: "Pictures/1 (15).jpg",
+              link: "/news/lagos-visit",
+              text: "As part of its mission to expand NIMELSSA’s reach, the Southwest executives visited Lagos State University (LASU)..."
+            }
+          ].map((news, i) => (
+            <div key={i} className="col-md-6">
+              <div className="card h-100 border-0 shadow-sm overflow-hidden transition hover-y">
+                <img src={news.img} className="card-img-top" alt={news.title} style={{ height: "240px", objectFit: "cover" }} />
+                <div className="card-body p-4">
+                  <div className="d-flex align-items-center mb-2">
+                    <span className="badge bg-success-subtle text-success border border-success-subtle me-2">Press Release</span>
+                    <small className="text-muted"><i className="bi bi-calendar3 me-1"></i>{news.date}</small>
+                  </div>
+                  <h5 className="fw-bold text-dark mb-3">{news.title}</h5>
+                  <p className="text-muted small mb-4">{news.text}</p>
+                  <NavLink to={news.link} className="btn btn-outline-success">
+                    Read More
                   </NavLink>
+                </div>
               </div>
             </div>
-          </div>
-
-          {/* === NEWS 2 === */}
-          <div className="col-md-6">
-            <div className="news-card">
-              <img src="Pictures/1 (15).jpg" alt="NIMELSSA SW Leaders at Redeemer’s University" />
-              <div className="news-body">
-                <h5 className="headline">NIMELSSA SW Leaders Visit Redeemer’s University</h5>
-                <p className="meta">Press Release | August 6, 2025</p>
-                <p>
-                  The Southwest leadership of NIMELSSA paid a strategic courtesy visit to Redeemer’s University, 
-                  strengthening collaboration and encouraging student participation in regional activities...
-                </p>
-                <NavLink to="/news/redeemers-visit" className="btn btn-readmore">
-                  Read More
-                  </NavLink>
-              </div>
-            </div>
-          </div>
-
-          {/* === NEWS 3 === */}
-          <div className="col-md-6">
-            <div className="news-card">
-              <img src="Pictures/1 (15).jpg" alt="UNIMED Visit" />
-              <div className="news-body">
-                <h5 className="headline">Courtesy Visit to the Acting Vice Chancellor, UNIMED Ondo</h5>
-                <p className="meta">June 7, 2025 • Southwest Regional Congress</p>
-                <p>
-                  As part of the ongoing NIMELSSA Southwest Regional Congress and Leadership Summit, regional executives 
-                  paid a courtesy visit to the Acting Vice Chancellor, Professor Adolphus Loto, who emphasized the vital 
-                  role of Medical Laboratory Scientists in healthcare...
-                </p>
-                <NavLink to="/news/unimed-visit" className="btn btn-readmore">
-                  Read More
-                </NavLink>                
-              </div>
-            </div>
-          </div>
-
-          {/* === NEWS 4 === */}
-          <div className="col-md-6">
-            <div className="news-card">
-              <img src="Pictures/1 (15).jpg" alt="LASU Visit" />
-              <div className="news-body">
-                <h5 className="headline">
-                  NIMELSSA Southwest Region Pays Courtesy Visit to Lagos State University
-                </h5>
-                <p className="meta">July 8, 2025 • NIMELSSA Southwest Press</p>
-                <p>
-                  As part of its mission to expand NIMELSSA’s reach and strengthen collaboration, the Southwest executives 
-                  visited Lagos State University (LASU), where Medical Laboratory Science is a newly introduced program...
-                </p>
-                <NavLink to="/news/lagos-visit" className="btn btn-readmore">
-                  Read More
-                </NavLink>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </main>
-
-      {/* Footer */}
-
     </>
   );
 }
