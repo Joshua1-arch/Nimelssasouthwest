@@ -7,7 +7,7 @@ import HomePage from "./pages/HomePage";
 import ExecutivesPage from "./pages/ExecutivesPage";
 import PastExecutives from "./pages/PastExecutives"; // Removed the duplicate
 import EventsPage from "./pages/EventsPage";
-import Newspage from "./pages/NewsPage";
+import Newspage from "./pages/Newspage";
 import ContactPage from "./pages/ContactPage";
 
 // News Sub-pages
