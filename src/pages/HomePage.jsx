@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import imagesData from "../images.json";
 import { NavLink } from "react-router-dom";
-import "../HomePage.css";
+import "./HomePage.css";
 
 export default function HomePage() {
   useEffect(() => {
