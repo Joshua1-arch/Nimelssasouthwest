@@ -153,11 +153,6 @@ export default function HomePage() {
                   These achievements are a testament to our collective dedication. Every milestone we have reached has been made
                   possible through the unwavering support, commitment, and shared vision of our members, partners, and stakeholders.
                 </p>
-                <p className="mb-4" style={{ textAlign: "justify" }}>
-                  As you explore our platform, let us remain committed to innovation, embrace leadership with responsibility, and
-                  create lasting impact in our profession. Together, we will continue to <strong>Inquire, Analyze, Create, and Transform (I ACT)</strong> as
-                  we shape the future of Medical Laboratory Science.
-                </p>
                 <div className="mt-5 p-4 bg-light rounded-4 border-start border-4 border-success">
                   <p className="fst-italic mb-2 text-muted">&quot;With warm regards,&quot;</p>
                   <p className="h5 fw-bold mb-0">Rt. Hon. Popoola David Ayanfeoluwa</p>
