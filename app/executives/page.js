@@ -17,7 +17,7 @@ export default function ExecutivesPage() {
             {[
               { name: "Rt. Hon. Popoola David Ayanfeoluwa", role: "President", img: "/presido.jpg" },
               { name: "Hon. Amusa Aisha Adebola", role: "Vice President", img: "/vicepre.jpg" },
-              { name: "Hon. Hamzat Temitayo Grace", role: "General Secretary", img: "/GS.JPG" },
+              { name: "Hon. Hamzat Temitayo Grace", role: "General Secretary", img: "/GS.jpg" },
               { name: "Hon. Adegbonmire Adeola Mercy", role: "Assistant General Secretary", img: "/AGS.JPG" },
               { name: "Hon. Olaniyi Oluwaseye Gideon", role: "Financial Secretary", img: "/FIN.jpg" },
               { name: "Hon. Abayomi Vincent Obafemi", role: "PRO", img: "/PRO1.jpg" },

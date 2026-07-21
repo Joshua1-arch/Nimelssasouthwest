@@ -20,6 +20,20 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);
 
+  const closeNavbar = () => {
+    const collapseElement = document.getElementById("navbarNav");
+    if (collapseElement && collapseElement.classList.contains("show")) {
+      if (typeof window !== "undefined" && window.bootstrap) {
+        const bsCollapse =
+          window.bootstrap.Collapse.getInstance(collapseElement) ||
+          new window.bootstrap.Collapse(collapseElement, { toggle: false });
+        bsCollapse.hide();
+      } else {
+        collapseElement.classList.remove("show");
+      }
+    }
+  };
+
   return (
     <nav
       className={`navbar navbar-expand-lg navbar-dark fixed-top ${scrolled ? "scrolled shadow-sm" : ""}`}
@@ -28,7 +42,7 @@ const Navbar = () => {
       }}
     >
       <div className="container">
-        <Link className="navbar-brand" href="/">
+        <Link className="navbar-brand" href="/" onClick={closeNavbar}>
           <img src="/logo1.png" alt="Logo" height="40" />
         </Link>
 
@@ -47,21 +61,21 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className={`nav-link ${pathname === "/" ? "active" : ""}`} href="/">Home</Link>
+              <Link className={`nav-link ${pathname === "/" ? "active" : ""}`} href="/" onClick={closeNavbar}>Home</Link>
             </li>
 
             <li className="nav-item">
-              <Link className={`nav-link ${pathname === "/executives" ? "active" : ""}`} href="/executives">Executives</Link>
+              <Link className={`nav-link ${pathname === "/executives" ? "active" : ""}`} href="/executives" onClick={closeNavbar}>Executives</Link>
             </li>
 
             <li className="nav-item">
-              <Link className={`nav-link ${pathname === "/events" ? "active" : ""}`} href="/events">Events</Link>
+              <Link className={`nav-link ${pathname === "/events" ? "active" : ""}`} href="/events" onClick={closeNavbar}>Events</Link>
             </li>
             <li className="nav-item">
-              <Link className={`nav-link ${pathname.startsWith("/news") ? "active" : ""}`} href="/news">News</Link>
+              <Link className={`nav-link ${pathname.startsWith("/news") ? "active" : ""}`} href="/news" onClick={closeNavbar}>News</Link>
             </li>
             <li className="nav-item">
-              <Link className={`nav-link ${pathname === "/contact" ? "active" : ""}`} href="/contact">Contact</Link>
+              <Link className={`nav-link ${pathname === "/contact" ? "active" : ""}`} href="/contact" onClick={closeNavbar}>Contact</Link>
             </li>
           </ul>
         </div>
